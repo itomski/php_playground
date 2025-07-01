@@ -1,0 +1,9 @@
+version: '4'
+services:
+  webserver:
+    image: php:8.3-apache
+    container_name: webserver
+    ports:
+      - 8080:80
+    volumes:
+      - ${PWD}:/var/www/html/

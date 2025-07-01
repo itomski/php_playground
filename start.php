@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <!--
+    <pre>
+    Das ist ist
+    das Haus von
+    Nikigraus
+    </pre>
+    -->
 
     <main>
         <h1>Moin Moin: <?php echo date("d.m.Y H:i", time()) ?></h1>
