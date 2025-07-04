@@ -14,6 +14,11 @@ function add($p1, $p2) {
 echo add($a, $b);
 echo '<br>';
 echo $sum;
+echo '<br>';
+
+echo add("A", "B");
+echo '<br>';
+
 
 // $firstname ist ein Pflicht-Parameter (immer an den Anfang der Parameterliste)
 // $lastname ist ein optionaler Parameter (immer ans Ende der Parameterliste)
