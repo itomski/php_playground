@@ -23,37 +23,52 @@
                     </div>
 
                     <div class="mb-3">
+                        <input type="password" name="password" id="password" placeholder="Passwort" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
                         <textarea name="message" id="message" class="form-control" rows="5" placeholder="Nachricht"></textarea>
                     </div>
 
                     <div class="mb-3">
                         <div class="form-check">
-                            <input type="radio" name="category" id="cat_politics">
-                            <label for="cat_politics">Politik</label>
+                            <input type="radio" class="form-check-input" name="category" id="cat_politics" value="politics">
+                            <label class="form-check-label" for="cat_politics">Politik</label>
                         </div>
 
                         <div class="form-check">
-                            <input type="radio" name="category" id="cat_economicy">
-                            <label for="cat_economicy">Wirtschaft</label>
+                            <input type="radio" class="form-check-input" name="category" id="cat_economicy" value="economics">
+                            <label class="form-check-label" for="cat_economics">Wirtschaft</label>
                         </div>
 
                         <div class="form-check">
-                            <input type="radio" name="category" id="cat_science">
-                            <label for="cat_science">Wissenschaft</label>
+                            <input type="radio" class="form-check-input" name="category" id="cat_science" value="science">
+                            <label class="form-check-label" for="cat_science">Wissenschaft</label>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <select name="" id="">
-                            <option>Deutschland</option>
-                            <option>Japan</option>
-                            <option>UK</option>
-                            <option>USA</option>
+                        <select name="country" class="form-select">
+                            <option value="DE" selected>Deutschland</option>
+                            <option value="JP">Japan</option>
+                            <option value="GB">UK</option>
+                            <option value="US">USA</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tags[]" value="timely" id="tags_timely">
+                            <label class="form-check-label" for="tags_timely">Aktuell</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tags[]" value="important" id="tags_important">
+                            <label class="form-check-label" for="tags_important">Wichtig</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tags[]" value="interesting" id="tags_interesting">
+                            <label class="form-check-label" for="tags_interesting">Interessant</label>
+                        </div>
                     </div>
 
                     <button class="btn btn-secondary">Senden</button>
