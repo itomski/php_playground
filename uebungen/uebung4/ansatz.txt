@@ -1,0 +1,4 @@
+Datei mit Array bauen
+Formular mit X und Y bauen
+Formulardaten auslesen
+Prüfen ob Eingabe im Array vorhanden

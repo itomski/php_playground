@@ -4,7 +4,6 @@ $spielfeld = require_once 'spielfeld.php';
 
 $gefunden = '';
 
-
 function check($value, $max) : bool {
     return $value >= 0 && $value < $max;
 }
