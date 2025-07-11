@@ -1,5 +1,8 @@
 <?php
 
+require_once 'config.php';
+checkLogin(); // Prüft, ob User eingelogt, sonst Weiterleitung auf login.php
+
 $zahlen = [10,15,22,7,9,1,-15];
 // $zahlen = array(10,15,22,7,9,1,-15); // gleichwertig
 
