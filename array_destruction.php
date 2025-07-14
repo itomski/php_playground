@@ -1,21 +1,28 @@
 <?php
 
+echo '<pre>';
+
 $page = [
     'header' => 'Kopfbereich',
     'main' => 'Hauptbereich',
     'footer' => 'Fußbereich'
 ];
 
-// Destructin eines assoziativen Arrays
+// Destructing eines assoziativen Arrays
 extract($page); // Wandelt die Schlüssel des Arrays in Variablen um
 //echo $header;
 
-[$n1, $n2] = [['Peter', 'Parker', 'Spiderman'], ['Bruce', 'Banner', 'Hulk'], ['Carol', 'Danvers','Cap. Marvel']]; // Zuweisung von Werten eines Arrays auf Variablen
+print_r($page);
 
-echo '<pre>';
+// Änderung an der Variable verändert nicht das Oringinal im Array
+$header = 'Geänderter Kopfbereich';
+
+print_r($page);
+
+[$n1, $n2] = [['Peter', 'Parker', 'Spiderman'], ['Bruce', 'Banner', 'Hulk'], ['Carol', 'Danvers','Cap. Marvel']]; // Zuweisung von Werten eines Arrays auf Variablen
 print_r($n1);
 print_r($n2);
-echo '</pre>';
+
 
 // Destructing von Objekten
 class Hero {
@@ -26,9 +33,10 @@ class Hero {
 
 $h1 = new Hero();
 extract(get_object_vars($h1));
-echo $vorname;
-echo $h1->vorname;
+echo $vorname.PHP_EOL;
+echo $h1->vorname.PHP_EOL;
 
+echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
