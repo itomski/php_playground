@@ -35,7 +35,7 @@ $p2 = new Person(); // Instanzierung oder Objekterzeugung
 $p3 = new Person(); // Instanzierung oder Objekterzeugung
 
 // Verändert NUR die Eigenschaften von $p2
-$p2->vorname = 'Peter';
+$p2->vorname = 11;
 $p2->nachname = 'Parker';
 $p2->alter = 20.5;
 
