@@ -13,11 +13,9 @@ class Person {
         return $this->vorname;
     }
 
-    public function setVorname(string $vorname) // Schreiben
+    public function setVorname(string $vorname) : void // Schreiben
     {
         $this->vorname = $vorname;
-
-        return $this;
     }
 }
 
