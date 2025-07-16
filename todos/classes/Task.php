@@ -1,5 +1,7 @@
 <?php
 
+require_once 'Helper.php';
+
 // Model
 
 class Task {
@@ -11,8 +13,6 @@ class Task {
     private $erzeugtAm;
     
     private $erledigt = false;
-
-    private const DATE_FMT = 'd.m.Y';
 
 
     public function getName(): string
@@ -44,7 +44,7 @@ class Task {
 
     public function getErzeugtAmFormatted(): string
     {
-        return date(self::DATE_FMT, $this->erzeugtAm);
+        return date(Helper::DATE_FMT, $this->erzeugtAm);
     }
 
     public function setErzeugtAm(int $erzeugtAm): Task

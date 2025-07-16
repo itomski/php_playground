@@ -4,6 +4,7 @@
 
 class TaskRepository {
 
+
     private const FILE = 'tasks.db'; // Hier werden die Daten abgelegt
 
 
@@ -23,6 +24,6 @@ class TaskRepository {
     public function writeAll(array $tasks): void
     {
         // Wandelt ein Array in Text um und speichert ihn in eine Datei
-        file_put_contents(self::FILE, serialize($tasks));        
+        file_put_contents(self::FILE, serialize($tasks));
     }
 }
