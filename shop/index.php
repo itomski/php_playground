@@ -1,5 +1,6 @@
 <?php
 require_once 'ShoppingCart.php';
+require_once 'ProductDTO.php';
 session_start();
 
 // instanceof prüft, ob eine Variable ein Objekt eines bestimmten Typs enthält
@@ -7,9 +8,14 @@ if(!isset($_SESSION['cart']) || !($_SESSION['cart'] instanceof ShoppingCart))
     // Ist in der Session kein cart hinterlegt, oder cart ist nicht vom Typ ShoppingCart, dann...
     $_SESSION['cart'] = new ShoppingCart();
 
-if(isset($_POST['name']))
+if(isset($_POST['name'])) {
     // TODO: Daten validieren und säubern
-    $_SESSION['cart']->addProduct(new Product($_POST['name'], $_POST['quantity'], $_POST['price']));
+    //$_SESSION['cart']->addProduct(new Product($_POST['name'], $_POST['quantity'], $_POST['price']));
+    $dto = new ProductDTO($_POST);
+    $_SESSION['cart']->addProduct($dto->toProduct());
+    // Daten aus Formularen sollten IMMER vor der Verwendung validiert werden
+    // Hier könnte man auch ein DTO verwenden. Data Transfer Object
+}
 
 echo '<pre>';
 print_r($_SESSION);
