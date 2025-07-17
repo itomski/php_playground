@@ -8,6 +8,18 @@
 </head>
 <body>
     <main class="container">
+        <?php if($status == 1) { ?>
+            Pilz gesetzt
+        <?php } elseif($status == -1) { ?>
+            Pilz nicht gesetzt
+        <?php } elseif($status == 2) { ?>
+            Pilz gefunden
+        <?php } elseif($status == -2) { ?>
+            Pilz nicht gefunden
+        <?php } elseif($status == -3) { ?>
+            Ungültige Positionen
+        <?php } ?>
+        
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
             <button name="btn" value="reset">Neues Spiel starten</button>
         </form>
