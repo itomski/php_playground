@@ -33,8 +33,7 @@ class Pilzsuche {
     public function setzePilz(int $x, int $y): bool {
         // TODO: Positionen ab 1 bis ... statt 0 bis ... verwenden
         // Ein Pilz darf nur gesetzt werden, wenn x und y im gültigen Bereich liegen
-        //if(($x >= 0 && $x < $this->groesse) && ($y >= 0 && $y < $this->groesse)) {
-            
+        //if(($x >= 0 && $x < $this->groesse) && ($y >= 0 && $y < $this->groesse)) { // Validierung im DTO
             if($this->spielfeld[$x][$y] == 0) { // Pilz nur setzen, wenn das Feld leer ist
                 $this->spielfeld[$x][$y] = 1;
                 return true;
@@ -45,7 +44,7 @@ class Pilzsuche {
 
     public function checkPilzAnPosition(int $x, int $y): bool {
         // TODO: Positionen ab 1 bis ... statt 0 bis ... verwenden
-        //if(($x >= 0 && $x < $this->groesse) && ($y >= 0 && $y < $this->groesse)) {
+        //if(($x >= 0 && $x < $this->groesse) && ($y >= 0 && $y < $this->groesse)) { // Validierung im DTO
             if($this->spielfeld[$x][$y] == 1) {
                 return true;
             }
