@@ -8,6 +8,10 @@
 </head>
 <body>
     <main class="container">
+        <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
+            <button name="btn" value="reset">Neues Spiel starten</button>
+        </form>
+
         <h2>Pilz setzen</h2>
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
             <div>
