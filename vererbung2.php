@@ -2,13 +2,26 @@
 
 abstract class Lebewesen {
 
+    private $name = 'Unbekannt';
+
     abstract public function gibLaut(): string; // Abstrakte Methoden sind nicht ausprogrammiert
     // Sie haben keinen Body
     // Muss in der Kindklasse eingebaut werden
+
+    // Kann auch normale Methoden mit Body enthalten
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 }
 
-
-
+// Es kann immer nur von einer Klasse geerbt werden
 class Hund extends Lebewesen {
 
     public function gibLaut(): string {
@@ -81,7 +94,7 @@ $liste->add(new Hund());
 
 function gibLaute(TierListe $tiere) {
     foreach($tiere->getAll() as $tier) {
-        echo '<h2>'.$tier->gibLaut().'</h2>';
+        echo '<h2>'.$tier->getName().': '.$tier->gibLaut().'</h2>';
     }
 }
 
