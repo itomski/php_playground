@@ -31,7 +31,7 @@ $gruppe2 = new BotGruppe();
 $gruppe2->add(new HaushaltsBot());
 $gruppe2->add(new ForschungsBot());
 $gruppe2->add(new IndustrieBot());
+$gruppe2->add(new BuegelBot());
 $gruppe2->add($gruppe);
 
 $gruppe2->doTheJob();
-
