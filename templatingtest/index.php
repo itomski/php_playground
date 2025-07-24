@@ -10,6 +10,11 @@ switch($page) {
 
     case 'about':
         $subtpl = 'about';
+        $cards = [
+            ['name' => 'Peter Parker', 'position' =>'CEO'],
+            ['name' => 'Bruce Banner', 'position' => 'Security'],
+            ['name' => 'Carol Danvers', 'position' => 'HR']
+        ];
         break;
 
     default:
