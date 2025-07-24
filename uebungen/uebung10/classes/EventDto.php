@@ -33,6 +33,7 @@ class EventDto {
 
     function getErrors(): array
     {
+        include_once('...');
         return $this->errors;
     }
 
