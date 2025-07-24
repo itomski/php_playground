@@ -31,6 +31,16 @@
         </div>
         <button type="submit">Speichern</button>
     </form>
-    
+
+    <hr>
+
+    <?php foreach($events as $e) { ?>
+    <div>
+        <div><?= $e->getStartDate()->format('d.m.y H:i') ?></div>
+        <div><?= $e->getEndDate()->format('d.m.y H:i') ?></div>
+        <div><?= $e->getTitle() ?></div>
+        <div><?= $e->getDescription() ?></div>
+    </div>
+    <?php } ?>
 </body>
 </html>
