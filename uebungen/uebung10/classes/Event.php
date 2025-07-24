@@ -2,31 +2,29 @@
 
 class Event
 {
-    private $startDate = null;
+    private $startDate;
     private $endDate;
-    private $title = '';
+    private $title;
     private $description;
 
-    public function getStartDate()
+    public function getStartDate(): DateTime
     {
         return $this->startDate;
     }
 
-    public function setStartDate($startDate)
+    public function setStartDate(DateTime $startDate): void
     {
         $this->startDate = $startDate;
-        return $this;
     }
 
-    public function getEndDate()
+    public function getEndDate(): DateTime
     {
         return $this->endDate;
     }
 
-    public function setEndDate($endDate)
+    public function setEndDate(DateTime $endDate): void
     {
         $this->endDate = $endDate;
-        return $this;
     }
 
     public function getTitle(): string
