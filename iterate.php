@@ -26,11 +26,15 @@ $rands = generate100Randoms(1, 10, 5);
 
 echo '<hr>';
 
-// 
-class AbstractIterator implements Iterator
+abstract class AbstractIterator implements Iterator
 {
     private $pos = 0;
     private $elements = [];
+
+    public function __construct(array &$arr)
+    {
+        $this->elements = &$arr; // Elements ist eine Referenz auf das Array in der Kindklasse
+    }
 
     public function current(): mixed {
         return $this->elements[$this->pos];
@@ -58,6 +62,11 @@ class KundenListe extends AbstractIterator
 {
     private $kunden = [];
 
+    public function __construct()
+    {
+        parent::__construct($this->kunden);
+    }
+
     public function get(): array
     {
         return $this->kunden;
@@ -77,4 +86,33 @@ $list->add('Bruce');
 // KundenList Objekt kann wie eine Sammlung genutzt werden
 foreach($list as $kunde) {
     echo $kunde.'<br>';
+}
+
+echo '<hr>';
+
+class ZahlenListe extends AbstractIterator
+{
+    private $zahlen = [];
+
+    public function __construct()
+    {
+        parent::__construct($this->zahlen);
+    }
+
+    public function get(): array
+    {
+        return $this->zahlen;
+    }
+
+    public function add(int $zahl): ZahlenListe
+    {
+        $this->zahlen[] = $zahl;
+        return $this;
+    }
+}
+
+$sammlung = new ZahlenListe();
+$sammlung->add(10)->add(15)->add(22)->add(172);
+foreach($sammlung as $v) {
+    echo $v.'<br>';
 }
