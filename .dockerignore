@@ -1,0 +1,4 @@
+*.pdf
+.git
+.DS_Store
+# Datien und Ordner, die nicht auf den Webserver verfügbar sein sollen
