@@ -5,7 +5,7 @@ $a = 10;
 $A = 15;
 $_abc = 20;
 $anzahl_personen = 20; // snake_case
-const PI = 3.14; // SCREAMING_SNAKE_CASE
+const PI = 3.14; // SCREAMING_SNAKE_CASE: Konstanten
 $anzahlPersonen = 20; // camelCase / beginnt mit Kleinbuchstaben / wird für Eigenschaften, Methoden, Funktionen verwendet
 //$anazhl-personen = 100; // kebap-case - produziert in PHP einen Syntax-Fehler
 
