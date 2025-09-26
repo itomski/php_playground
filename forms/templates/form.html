@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.php?a=100">Seite 1</a></li>
+            <li><a href="index.php?a=200">Seite 2</a></li>
+            <li><a href="index.php?a=300">Seite 3</a></li>
+            <li><a href="index.php?a=400">Seite 4</a></li>
+        </ul>
+    </nav>
+    <main>
+        <hr>
+        <form action="index.php" method="post">
+            <div>
+                Anrede</div>
+                <input type="radio" name="anrede" id="anrede_m" value="M"><label for="anrede_m">Herr</label>
+                <input type="radio" name="anrede" id="anrede_w" value="W"><label for="anrede_w">Frau</label>
+            </div>
+            <div>
+                <label for="vorname">Vorname</label>
+                <input type="text" name="vorname" id="vorname">
+            </div>
+            <div>
+                <label for="nachname">Nachname</label>
+                <input type="text" name="nachname" id="nachname">
+            </div>
+            <div>
+                <label for="abteilung">Abteilung</label>
+                <select name="abteilung[]" multiple>
+                    <option value="sales">Verkauf</option>
+                    <option value="accounting">Buchhaltung</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="production">Produktion</option>
+                    <option value="research">Forschung</option>
+                </select>
+            </div>
+            <div>
+                Interessen<br>
+                <input type="checkbox" name="interessen[]" id="i_sport" value="sport"> 
+                <label for="i_sport">Sport</label><br>
+
+                <input type="checkbox" name="interessen[]" id="i_politik" value="politik">
+                <label for="i_politik">Politik</label><br>
+
+                <input type="checkbox" name="interessen[]" id="i_wirtschaft" value="wirtschaft">
+                <label for="i_wirtschaft">Wirtschaft</label><br>
+            </div>
+            <button type="submit">Senden</button>
+        </form>
+        <hr>
+        <form action="index.php" method="post">
+            <input type="text" name="suche" id="suche" placeholder="Suche...">
+            <button type="submit">Go</button>
+        </form>
+    </main>
+</body>
+</html>

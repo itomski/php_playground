@@ -1,0 +1,1 @@
+a:4:{i:0;a:2:{s:7:"vorname";s:5:"Peter";s:8:"nachname";s:6:"Parker";}i:1;a:2:{s:7:"vorname";s:5:"Bruce";s:8:"nachname";s:6:"Banner";}i:2;a:2:{s:7:"vorname";s:5:"Carol";s:8:"nachname";s:7:"Danvers";}i:3;a:2:{s:7:"vorname";s:5:"Scott";s:8:"nachname";s:4:"Lang";}}
