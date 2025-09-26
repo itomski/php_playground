@@ -13,5 +13,4 @@ Dazu muss das Array zuerst aus der Datei eingelesen werden, als Array rekonstrui
 Anschließend wird das Array wieder gespeichert.
 
 Das Frontend lest die Daten ein, rekonstruiert sie und zeigt sie in Form einer Tabelle an.
-
 */
