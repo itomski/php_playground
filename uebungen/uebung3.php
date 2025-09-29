@@ -13,4 +13,10 @@ Dazu muss das Array zuerst aus der Datei eingelesen werden, als Array rekonstrui
 Anschließend wird das Array wieder gespeichert.
 
 Das Frontend lest die Daten ein, rekonstruiert sie und zeigt sie in Form einer Tabelle an.
+
+Erweiterung:
+Schütze das Formulat mit Logindaten.
+Sind diese ok, wird das Formular angezeigt.
+Sind sie falsch, wird eine passende Meldung angezeigt oder es erfolgt eine Weiterleitung auf die Fahrzeugübersicht.
+
 */
