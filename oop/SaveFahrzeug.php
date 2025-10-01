@@ -9,6 +9,14 @@ class SaveFahrzeug {
     private $modell;
     private $baujahr;
     private $fahrBereit;
+
+    // Startwerte: wird automatisch bei Verwendung von new benutzt
+    public function __construct(string $kennzeichen, string $marke = 'Unbekannt', string $modell = 'Unbekannt')
+    {
+        $this->kennzeichen = $kennzeichen;
+        $this->marke = $marke;
+        $this->modell = $modell;
+    }
     
     public function setKennzeichen(string $kennzeichen): void {
         // TODO: Validierung
