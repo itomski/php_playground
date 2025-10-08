@@ -1,0 +1,10 @@
+<?php
+
+namespace Project2\Heplers;
+
+class OutputHelper {
+
+    function check() {
+        echo '...';
+    }
+}
