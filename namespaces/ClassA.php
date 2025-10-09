@@ -12,4 +12,3 @@ class ClassA {
         echo __NAMESPACE__.' '.__CLASS__.' doSomething<br>';
     }
 }
-
